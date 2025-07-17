@@ -1,5 +1,5 @@
 export type StackParamList = {
-  Galery: undefined;
+  Gallery: undefined;
   Details: undefined;
   Camera: undefined;
   CameraPreview: { photoPath: string };

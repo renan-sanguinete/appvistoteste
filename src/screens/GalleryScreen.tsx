@@ -2,7 +2,7 @@ import { Alert, View, Text, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Camera } from "react-native-vision-camera";
 
-export default function GaleryScreen() {
+export default function GalleryScreen() {
   const navigation = useNavigation<any>();
 
   // 

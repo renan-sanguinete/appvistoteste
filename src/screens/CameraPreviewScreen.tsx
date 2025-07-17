@@ -15,7 +15,7 @@ const CameraPreviewScreen = ({ route, navigation }: Props) => {
     const savedPath = await savePhoto(photoPath);
     if (savedPath) {
       Alert.alert('Sucesso', 'Dados da foto salvos');
-      navigation.navigate('Galery');
+      navigation.navigate('Gallery');
     } else {
       Alert.alert('Erro', 'Não foi possível salvar a foto.');
     }

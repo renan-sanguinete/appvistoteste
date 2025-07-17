@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import GaleryScreen from '../screens/GaleryScreen';
-import GaleryDetailsScreen from '../screens/GaleryDetailsScreen';
+import GalleryScreen from '../screens/GalleryScreen';
+import GalleryDetailsScreen from '../screens/GalleryDetailsScreen';
 import CameraScreen from '../screens/CameraScreen';
 import CameraPreviewScreen from '../screens/CameraPreviewScreen';
 import { StackParamList } from "../types/StackParamList";
@@ -9,15 +9,15 @@ const Stack = createNativeStackNavigator<StackParamList>();
 
 export default function AppStack() {
   return (
-    <Stack.Navigator initialRouteName="Galery">
+    <Stack.Navigator initialRouteName="Gallery">
       <Stack.Screen 
-        name="Galery" 
-        component={GaleryScreen} 
+        name="Gallery" 
+        component={GalleryScreen} 
         options={{ title: 'Galeria de Fotos' }}
       />
       <Stack.Screen 
         name="Details" 
-        component={GaleryDetailsScreen}
+        component={GalleryDetailsScreen}
         options={{ title: 'Detalhes da Foto' }}
       />
       <Stack.Screen 

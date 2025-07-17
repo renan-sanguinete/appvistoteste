@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native';
 
-export default function GaleryDetailsScreen() {
+export default function GalleryDetailsScreen() {
 
   return (
     <View className="flex-1 justify-center p-4 bg-slate-300">
