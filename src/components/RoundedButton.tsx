@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons, FontAwesome } from "@expo/vector-icons";
 import { 
     StyleProp,
     StyleSheet,
@@ -13,6 +13,7 @@ import { ComponentProps } from "react";
     onPress: () => void;
     title?: string;
     iconName?: ComponentProps<typeof Ionicons>["name"];
+    fontIconName?: ComponentProps<typeof FontAwesome>["name"];
     containerStyle?: StyleProp<ViewStyle>;
     iconSize?: number;
  }
@@ -20,6 +21,7 @@ import { ComponentProps } from "react";
  export default function RoundedButton ({
    onPress,
    iconName,
+   fontIconName,
    title,
    containerStyle,
    iconSize,
@@ -39,6 +41,9 @@ import { ComponentProps } from "react";
       >
          {iconName && (
             <Ionicons name={iconName} size={iconSize ?? 28} color={"white"} />
+         )}
+         {fontIconName && (
+            <FontAwesome name={fontIconName} size={iconSize ?? 28} color={"white"} />
          )}
          {title ? (
             <Text
