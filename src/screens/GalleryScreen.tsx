@@ -26,7 +26,6 @@ export default function GalleryScreen() {
 
   return (
     <View className="flex-1 justify-center p-4 bg-slate-300">
-      <Text className="text-xl font-bold text-center my-4">Galeria</Text>
       <GalleryList/>
       <TouchableOpacity
         className="bg-blue-600 px-4 py-2 my-4 rounded"
