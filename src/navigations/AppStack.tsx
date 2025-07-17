@@ -2,8 +2,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import GaleryScreen from '../screens/GaleryScreen';
 import GaleryDetailsScreen from '../screens/GaleryDetailsScreen';
 import CameraScreen from '../screens/CameraScreen';
+import CameraPreviewScreen from '../screens/CameraPreviewScreen';
+import { StackParamList } from "../types/StackParamList";
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<StackParamList>();
 
 export default function AppStack() {
   return (
@@ -21,6 +23,11 @@ export default function AppStack() {
       <Stack.Screen 
         name="Camera" 
         component={CameraScreen}
+        options={{headerShown:false}}
+      />
+      <Stack.Screen 
+        name="CameraPreview" 
+        component={CameraPreviewScreen}
         options={{headerShown:false}}
       />
     </Stack.Navigator>

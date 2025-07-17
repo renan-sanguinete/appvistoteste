@@ -4,8 +4,10 @@ import { Camera, useCameraDevice} from 'react-native-vision-camera';
 import RoundedButton from "../components/RoundedButton";
 import { useState } from 'react';
 import React, { useRef } from 'react';
+import { useNavigation } from '@react-navigation/native';
  
 export default function CameraScreen() {
+  const navigation = useNavigation<any>();
   const [cameraPosition, setCameraPosition] = useState<"front" | "back">("back");
   const [flash, setFlash] = useState<"on" | "off">("off");
   const device = useCameraDevice(cameraPosition);
@@ -22,10 +24,9 @@ export default function CameraScreen() {
       }
       const photo = await cameraRef.current.takePhoto({
         flash: flash,
-        enableShutterSound: false,
       })   
       console.log('Foto:', photo); 
-      // criar a rota e direcionar para a tela de preview
+      navigation.navigate('CameraPreview', { photoPath: photo.path });
 
     } catch(e) {
       console.log(e)
