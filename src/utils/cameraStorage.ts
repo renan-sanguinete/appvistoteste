@@ -1,5 +1,6 @@
 import * as FileSystem from 'expo-file-system';
 import { PhotoData } from "../types/PhotoData";
+import { getCurrentLocation } from "../utils/geolocation";
 
 export const savePhoto = async (
   tempPath: string
@@ -26,10 +27,13 @@ export const savePhoto = async (
         month: '2-digit',
         year: 'numeric'
     });
+    const location = await getCurrentLocation();
     const photoData: PhotoData = {
       uri: newPhotoPath,
       data: formattedDate,
       hora: now.toTimeString().split(' ')[0],
+      latitude: location?.latitude,
+      longitude: location?.longitude,
     };
 
     const dataPath = folderUri + `app_visto_${timestamp}.json`;
