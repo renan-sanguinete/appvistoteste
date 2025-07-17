@@ -1,6 +1,8 @@
+import { PhotoData } from "./PhotoData";
+
 export type StackParamList = {
   Gallery: undefined;
-  Details: undefined;
+  Details: { item: PhotoData };
   Camera: undefined;
   CameraPreview: { photoPath: string };
 };
