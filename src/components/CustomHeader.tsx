@@ -1,6 +1,7 @@
 import { NativeStackHeaderProps } from "@react-navigation/native-stack";
 import { View, Text, StyleSheet, Platform, StatusBar, TouchableOpacity, Image, SafeAreaView } from "react-native";
 import { MaterialIcons, MaterialCommunityIcons } from "@expo/vector-icons";
+import { checkCameraPermissonAndNavigate } from "../utils/checkPermissionAndNavigate";
 
 type Props = NativeStackHeaderProps;
 
@@ -28,7 +29,7 @@ export default function CustomHeader ({ route, navigation, options }: Props) {
                 </View>
                 {hasRightButton && (
                     <TouchableOpacity
-                    onPress={() => navigation.navigate('Camera')}
+                    onPress={() => checkCameraPermissonAndNavigate(navigation)}
                     className="pl-4"
                     >
                         <MaterialCommunityIcons name="camera-plus-outline" size={24} color="black" />
