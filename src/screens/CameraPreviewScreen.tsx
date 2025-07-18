@@ -37,7 +37,7 @@ const CameraPreviewScreen = ({ route, navigation }: Props) => {
           <Text className="text-sm font-semibold text-gray-500">
             Informações
           </Text>
-          <View className="h-[1/2] bg-slate-300 my-2"/>
+          <View className="h-[1] bg-slate-300 my-2"/>
           <Text className="text-xs font-medium  text-gray-500">
             {`Data / Hora: ${infoPhoto.data} ${infoPhoto.hora}`}
           </Text>
