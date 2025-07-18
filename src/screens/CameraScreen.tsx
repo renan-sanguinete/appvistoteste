@@ -1,4 +1,4 @@
-import { Alert, View } from 'react-native';
+import { View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Camera, useCameraDevice} from 'react-native-vision-camera';
 import RoundedButton from "../components/RoundedButton";
@@ -6,6 +6,7 @@ import { useState } from 'react';
 import React, { useRef } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { getDataAndLocation } from '../utils/getDataAndLocation';
+import Toast from 'react-native-toast-message';
  
 export default function CameraScreen() {
   const navigation = useNavigation<any>();
@@ -17,10 +18,11 @@ export default function CameraScreen() {
   const handlePhoto = async () => {
     try {
       if (cameraRef.current == null) {
-        Alert.alert(
-          'Falha ao tirar foto',
-          'Câmera não foi encontrada.',
-        );
+        Toast.show({
+          type: 'error',
+          text1: 'Falha',
+          text2: 'Câmera não foi encontrada',
+        });
         throw new Error("Câmera não encontrada!")
       }
       const photo = await cameraRef.current.takePhoto({

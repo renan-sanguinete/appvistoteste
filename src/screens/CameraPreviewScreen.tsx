@@ -1,11 +1,12 @@
 import React from 'react';
-import { View, Image, Dimensions, Alert, Text, TouchableOpacity } from 'react-native';
+import { View, Image, Dimensions, Text, TouchableOpacity } from 'react-native';
 import { StackParamList } from "../types/StackParamList";
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { savePhoto } from "../utils/cameraStorage";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { MaterialIcons } from "@expo/vector-icons";
 import { deleteCachedPhoto } from "../utils/deleteCachedPhoto";
+import Toast from 'react-native-toast-message';
 type Props = NativeStackScreenProps<StackParamList, 'CameraPreview'>;
 
 const CameraPreviewScreen = ({ route, navigation }: Props) => {
@@ -14,13 +15,21 @@ const CameraPreviewScreen = ({ route, navigation }: Props) => {
   const handleSave = async () => {
     const savedPath = await savePhoto(infoPhoto);
     if (savedPath) {
-      Alert.alert('Sucesso', 'Dados da foto salvos');
+      Toast.show({
+        type: 'success',
+        text1: 'Sucesso',
+        text2: 'Foto salva',
+      });
       navigation.reset({
         index: 0,
         routes: [{ name: 'Gallery' }],
       })
     } else {
-      Alert.alert('Erro', 'Não foi possível salvar a foto.');
+      Toast.show({
+        type: 'error',
+        text1: 'Erro',
+        text2: 'Não foi possível salvar a foto',
+      });
     }
   };
 

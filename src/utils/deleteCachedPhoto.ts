@@ -1,10 +1,16 @@
 import * as FileSystem from 'expo-file-system';
+import Toast from 'react-native-toast-message';
 
 export const deleteCachedPhoto = async (photoPath: string) => {
   try {
     const file = await FileSystem.getInfoAsync(photoPath);
     if (file.exists) {
         await FileSystem.deleteAsync(photoPath, { idempotent: true });
+        Toast.show({
+            type: 'info',
+            text1: 'Removido',
+            text2: 'Foto foi removida',
+        });
     }
   } catch (error) {
     console.warn('Erro ao deletar a foto:', error);

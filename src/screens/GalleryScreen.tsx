@@ -1,6 +1,5 @@
-import { Alert, View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { Camera } from "react-native-vision-camera";
 import GalleryList from '../components/GalleryList';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { checkCameraPermissonAndNavigate } from '../utils/checkPermissionAndNavigate';
