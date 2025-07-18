@@ -5,6 +5,7 @@ import RoundedButton from "../components/RoundedButton";
 import { useState } from 'react';
 import React, { useRef } from 'react';
 import { useNavigation } from '@react-navigation/native';
+import { getDataAndLocation } from '../utils/getDataAndLocation';
  
 export default function CameraScreen() {
   const navigation = useNavigation<any>();
@@ -25,9 +26,8 @@ export default function CameraScreen() {
       const photo = await cameraRef.current.takePhoto({
         flash: flash,
       })   
-      console.log('Foto:', photo); 
-      navigation.navigate('CameraPreview', { photoPath: photo.path });
-
+      const infoPhoto = await getDataAndLocation(photo.path);
+      navigation.navigate('CameraPreview', { infoPhoto });
     } catch(e) {
       console.log(e)
     }
