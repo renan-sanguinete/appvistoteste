@@ -1,4 +1,4 @@
-import { getCurrentLocation } from "../utils/geolocation";
+import { getCurrentLocation } from "./getGeolocation";
 import { PhotoData } from "../types/PhotoData";
 export const getDataAndLocation = async (photoPath: string): Promise<PhotoData> => {
     const now = new Date();

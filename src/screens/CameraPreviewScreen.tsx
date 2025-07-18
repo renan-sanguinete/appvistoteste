@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Image, Dimensions, Text, TouchableOpacity } from 'react-native';
 import { StackParamList } from "../types/StackParamList";
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { savePhoto } from "../utils/cameraStorage";
+import { savePhoto } from "../utils/useCameraStorage";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { MaterialIcons } from "@expo/vector-icons";
 import { deleteCachedPhoto } from "../utils/deleteCachedPhoto";
