@@ -2,9 +2,7 @@ import { Alert } from "react-native";
 import { Camera } from "react-native-vision-camera";
 
 export const hasCameraPermission = async () => {
-    console.log('hasCameraPermission')
     const status = await Camera.getCameraPermissionStatus();
-    console.log('status', status)
     if (status === 'granted') {
         return true
     } else if (status === 'denied' || status === 'not-determined') {
