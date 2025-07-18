@@ -5,6 +5,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { savePhoto } from "../utils/cameraStorage";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { MaterialIcons } from "@expo/vector-icons";
+import { deleteCachedPhoto } from "../utils/deleteCachedPhoto";
 type Props = NativeStackScreenProps<StackParamList, 'CameraPreview'>;
 
 const CameraPreviewScreen = ({ route, navigation }: Props) => {
@@ -21,6 +22,12 @@ const CameraPreviewScreen = ({ route, navigation }: Props) => {
     } else {
       Alert.alert('Erro', 'Não foi possível salvar a foto.');
     }
+  };
+
+  const handleDeleteCachedPhoto = async () => {
+    const photoPath = 'file://' + infoPhoto.uri;
+    await deleteCachedPhoto(photoPath);
+    navigation.goBack();
   };
 
   return (
@@ -50,7 +57,7 @@ const CameraPreviewScreen = ({ route, navigation }: Props) => {
         <View className="flex-[1] mx-6 flex-row items-center justify-between bg-slate-300">
           <TouchableOpacity
             className="bg-red-500 flex-row items-center px-4 py-2 my-4 rounded"
-            onPress={() => navigation.goBack()}
+            onPress={() => handleDeleteCachedPhoto()}
           > 
             <MaterialIcons name="delete" size={16} color="white" />
             <Text className="text-white ml-1 text-center">Apagar Foto</Text>
