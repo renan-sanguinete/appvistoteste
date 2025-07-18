@@ -25,20 +25,14 @@ export default function GalleryScreen() {
   };
 
   return (
-    <View className="flex-1 justify-center p-4 bg-slate-300">
+    <View className="flex-1 overflow-hidden justify-center p-4 bg-slate-300">
       <GalleryList/>
-      <TouchableOpacity
-        className="bg-blue-600 px-4 py-2 my-4 rounded"
-        onPress={() => navigation.navigate('Details')}
-      >
-        <Text className="text-white text-center">Detalhes</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        className="bg-red-500 px-4 py-2 my-4 rounded"
-        onPress={() => {handleOpenCamera()}}
-      >
-        <Text className="text-white text-center">Câmera</Text>
-      </TouchableOpacity>
+        <TouchableOpacity
+          className="bg-red-500 px-4 py-2 my-4 rounded"
+          onPress={() => {handleOpenCamera()}}
+        >
+          <Text className="text-white text-center">Câmera</Text>
+        </TouchableOpacity>
     </View>
   );
 }

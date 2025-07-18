@@ -4,16 +4,23 @@ import GalleryDetailsScreen from '../screens/GalleryDetailsScreen';
 import CameraScreen from '../screens/CameraScreen';
 import CameraPreviewScreen from '../screens/CameraPreviewScreen';
 import { StackParamList } from "../types/StackParamList";
+import CustomHeader from '../components/CustomHeader';
 
 const Stack = createNativeStackNavigator<StackParamList>();
 
 export default function AppStack() {
   return (
-    <Stack.Navigator initialRouteName="Gallery">
+    <Stack.Navigator 
+    screenOptions={{
+        header: (props) => <CustomHeader {...props} />,
+      }}
+    initialRouteName="Gallery">
       <Stack.Screen 
         name="Gallery" 
-        component={GalleryScreen} 
-        options={{ title: 'Galeria de Fotos' }}
+        component={GalleryScreen}        
+        options={{ 
+          title: 'Galeria de Fotos', 
+        }}
       />
       <Stack.Screen 
         name="Details" 

@@ -60,16 +60,16 @@ export default function GalleryList () {
         keyExtractor={(item) => item.uri}
         numColumns={numColumns}
         renderItem={({ item }) => (
-            <View className='flex-1'>
+            <View className='w-1/3 items-center'>
                 <TouchableOpacity
-                    className="w-32 h-32 m-2 rounded-3xl overflow-hidden border border-gray-200"
+                    className="w-32 h-32 m-2 rounded-3xl overflow-hidden"
                     onPress={() => {
                         navigation.navigate('Details', { item })
                     }}
                 >
                     <Image
                     source={{ uri: item.uri }}
-                    style={{ flex: 1, aspectRatio: 1 }}
+                    style={{ flex: 1, aspectRatio: 1}}
                     resizeMode="cover"
                     />
                 </TouchableOpacity>
