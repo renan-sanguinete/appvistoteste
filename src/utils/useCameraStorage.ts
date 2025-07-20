@@ -20,15 +20,16 @@ export const savePhoto = async (
       to: newPhotoPath,
     });
 
+    const dataPath = folderUri + `app_visto_${timestamp}.json`;
     const photoData: PhotoData = {
+      jsonPath: dataPath,
       uri: newPhotoPath,
       data: infoPhoto.data,
       hora: infoPhoto.hora,
       latitude: infoPhoto?.latitude,
       longitude: infoPhoto?.longitude,
     };
-
-    const dataPath = folderUri + `app_visto_${timestamp}.json`;
+    
     await FileSystem.writeAsStringAsync(dataPath, JSON.stringify(photoData));
     return true;
   } catch (error) {

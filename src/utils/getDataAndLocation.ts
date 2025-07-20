@@ -10,10 +10,11 @@ export const getDataAndLocation = async (photoPath: string): Promise<PhotoData> 
     const formattedHour = now.toTimeString().split(' ')[0];
     const location = await getCurrentLocation();
     return {
-      uri: photoPath,
-      data: formattedHour,
-      hora: formattedDate,
-      latitude: location?.latitude,
-      longitude: location?.longitude,
+        jsonPath: '',
+        uri: photoPath,
+        data: formattedHour,
+        hora: formattedDate,
+        latitude: location?.latitude,
+        longitude: location?.longitude,
     };
 };
