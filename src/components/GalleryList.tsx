@@ -38,7 +38,6 @@ export const GalleryList = forwardRef((props: Props, ref) => {
                 const allData = JSON.parse(content);
                 const fileInfo = await FileSystem.getInfoAsync(allData.uri);
                 if (fileInfo?.exists) {
-                    console.log('allData.uri', fileInfo)
                     filesList.push(allData);
                 }
             }

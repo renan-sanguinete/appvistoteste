@@ -1,6 +1,7 @@
 import { getCurrentLocation } from "./getGeolocation";
 import { PhotoData } from "../types/PhotoData";
 export const getDataAndLocation = async (photoPath: string): Promise<PhotoData> => {
+    
     const now = new Date();
     const formattedDate = now.toLocaleDateString('pt-BR', {
           day: '2-digit',

@@ -7,8 +7,6 @@ type Props = NativeStackScreenProps<StackParamList, 'Details'>;
 
 const GalleryDetailsScreen = ({ route }: Props) => {
   const { item } = route.params;
-  console.log('item', item);
-  
 
   return (
     <View className="flex-1 items-center justify-center bg-slate-300">

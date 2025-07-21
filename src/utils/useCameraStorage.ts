@@ -4,6 +4,8 @@ import { PhotoData } from "../types/PhotoData";
 export const savePhoto = async (
   infoPhoto: PhotoData
 ): Promise<boolean | null> => {
+  
+  
   try {
     const folderUri = FileSystem.documentDirectory + 'photos/';
     const folderInfo = await FileSystem.getInfoAsync(folderUri);
