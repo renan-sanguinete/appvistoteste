@@ -2,6 +2,14 @@ import * as FileSystem from 'expo-file-system';
 import Toast from 'react-native-toast-message';
 import { PhotoData } from '../types/PhotoData';
 
+/**
+ * Verifica se os caminhos da foto e do json com os dados existe antes de deletar
+ *
+ * @async
+ * @function
+ * @param {PhotoData} item 
+ * @returns {Promise<void>} Realiza as ações sem retorno de valor.
+ */
 export const deleteDataPhoto = async (item: PhotoData) => {
     try {
         const filePhoto = await FileSystem.getInfoAsync(item.uri);

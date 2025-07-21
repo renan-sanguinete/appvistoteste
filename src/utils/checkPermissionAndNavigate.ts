@@ -2,6 +2,14 @@ import Toast from "react-native-toast-message";
 import { hasCameraPermission } from "../permissions/hasCameraPermission";
 import { hasLocationPermission } from "../permissions/hasLocationPermission";
 
+/**
+ * Verifica se as permissões de câmera e localização foram concedidas.
+ *
+ * @async
+ * @function
+ * @param {any} navigation
+ * @returns {Promise<void>} Apenas navega ou exibe uma mensagem.
+ */
 export const checkCameraPermissonAndNavigate = async (navigation: any) => {
     const hasCameraAuthorization = await hasCameraPermission()
     const hasLocationAuthorization = await hasLocationPermission()

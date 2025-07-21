@@ -17,7 +17,16 @@ import { ComponentProps } from "react";
     containerStyle?: StyleProp<ViewStyle>;
     iconSize?: number;
  }
-
+/**
+ * Componente de botão com estilo redondo.
+ *
+ * Permite que o botão contenha ícone e texto (Ionicons ou FontAwesome).
+ *
+ * @component
+ * @param {Object} props - Propriedades do botão.
+ *
+ * @returns {JSX.Element} Botão customizado.
+ */
  export default function RoundedButton ({
    onPress,
    iconName,

@@ -5,6 +5,17 @@ import { checkCameraPermissonAndNavigate } from "../utils/checkPermissionAndNavi
 
 type Props = NativeStackHeaderProps;
 
+/**
+ * Componente Header customizado.
+ *
+ * Permite que o Header seja informado se é necessário a exibição do botão goBack().
+ * Permite também que seja possível definir botões adicionais ao Header.
+ *
+ * @component
+ * @param {NativeStackHeaderProps} props - Propriedades do NativeStackHeaderProps, incluindo route, navigation e options.
+ *
+ * @returns {JSX.Element} Header customizado.
+ */
 export default function CustomHeader ({ route, navigation, options }: Props) {
     const canGoBack = navigation.canGoBack();
     const goBack = () => {

@@ -1,6 +1,15 @@
 import * as FileSystem from 'expo-file-system';
 import { PhotoData } from "../types/PhotoData";
 
+
+/**
+ * Salva uma foto no diretório local e gera um arquivo JSON com os dados da imagem.
+ *
+ * @async
+ * @function
+ * @param {PhotoData} infoPhoto
+ * @returns {Promise<boolean | null>} Retorna true se o arquivo for escrito corretamente ou null em caso de falha
+ */
 export const savePhoto = async (
   infoPhoto: PhotoData
 ): Promise<boolean | null> => {

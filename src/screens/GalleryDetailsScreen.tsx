@@ -5,6 +5,16 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { SafeAreaView } from 'react-native-safe-area-context';
 type Props = NativeStackScreenProps<StackParamList, 'Details'>;
 
+/**
+ * Componente que exibe detalhes da foto.
+ *
+ * Exibe a foto selecionada e também informações como data, hora e localização de quando a foto foi tirada.
+ *
+ * @component
+ * @param {NativeStackScreenProps<StackParamList, 'Details'>} props - Propriedades do NativeStackScreenProps, incluindo route.
+ *
+ * @returns {JSX.Element} Tela de Detalhes da foto.
+ */
 const GalleryDetailsScreen = ({ route }: Props) => {
   const { item } = route.params;
 

@@ -12,6 +12,15 @@ type Props = {
   setSelectedItem: (item: PhotoData | null) => void;
 };
 
+/**
+ * Componente que exibe uma lista de fotos salvas localmente.
+ *
+ * Permite acessar detalhes da foto com click simples ou selecionar a foto com o click longo.
+ *
+ * @component
+ * @param {PhotoData | null} selectedItem - Dados do item selecionado.
+ * @param {(item: PhotoData | null) => void} setSelectedItem - Atualiza o item selecionado.
+ */
 export const GalleryList = forwardRef((props: Props, ref) => {
     const { selectedItem, setSelectedItem } = props;
     const navigation = useNavigation<any>();

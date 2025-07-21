@@ -39,6 +39,19 @@ const CameraPreviewScreen = ({ route, navigation }: Props) => {
     navigation.goBack();
   };
 
+/**
+ * Componente que exibe detalhes da foto.
+ *
+ * Exibe a foto tirada e também informações como data, hora e localização de quando a foto foi tirada.
+ * Possui os botões:
+ * Apagar Foto: Que apaga a foto do cache e os dados da foto.
+ * Salvar Foto: Que salva a foto no dispositivo e os dados em um json.
+ *
+ * @component
+ * @param {NativeStackScreenProps<StackParamList, 'CameraPreview'>} props - Propriedades do NativeStackScreenProps, incluindo route, navigation.
+ *
+ * @returns {JSX.Element} Tela de Detalhes da foto.
+ */
   return (
     <View className="flex-1 items-center justify-center bg-black">
       <View className="flex-[3] items-center justify-center bg-black">

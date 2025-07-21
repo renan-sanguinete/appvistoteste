@@ -1,5 +1,10 @@
 import { ActivityIndicator, View, Text } from "react-native";
 
+/**
+ * Componente que exibe icone de loading na tela com a informação de texto `Carregando fotos` 
+ *
+ * @component
+ */
 export default function LoadingList () {
     return (
         <View className="flex-1 justify-center items-center bg-slate-300">

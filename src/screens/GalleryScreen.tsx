@@ -8,6 +8,22 @@ import { useRef, useState } from 'react';
 import { PhotoData } from '../types/PhotoData';
 import { deleteDataPhoto } from '../utils/deleteDataPhoto';
 
+/**
+ * Tela principal do aplicativo de Galeria de Fotos.
+ *
+ * Exibe a lista de fotos salvas localmente. 
+ * Ao selecionar uma foto é possível a exlusão da foto. Caso o usuário exclua a foto a lista é atualizada.
+ * Ao acessar a primeira vez o botão `Tirar uma foto` é requisitado o acesso as permissões de camera do dispositivo.
+ * Caso o usuário já tenha as permissões concedidas é redirecionado a tela Camera.
+ * 
+ * Componentes:
+ * GalleryList -  para exibir as imagens.
+ * GalleryListOptions - quando uma imagem é selecionada.
+ * SafeAreaView - utilizado para exibir o botão "Tirar uma foto" sem que haja conflito com o bottom.
+ *
+ * @component
+ * @returns {JSX.Element} Tela da galeria de fotos.
+ */
 export default function GalleryScreen() {
   const navigation = useNavigation<any>();
   const [selectedItem, setSelectedItem] = useState<PhotoData | null>(null);

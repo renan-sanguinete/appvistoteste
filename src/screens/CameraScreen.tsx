@@ -7,7 +7,15 @@ import React, { useRef } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { getDataAndLocation } from '../utils/getDataAndLocation';
 import Toast from 'react-native-toast-message';
- 
+
+/**
+ * Componente que exibe em tela a câmera.
+ * O componente tambpem contém os botões com as ações, tirar foto, ativar flash e alterar a camera (front ou back).
+ *
+ * @component
+ *
+ * @returns {JSX.Element} Tela de Detalhes da foto.
+ */
 export default function CameraScreen() {
   const navigation = useNavigation<any>();
   const [cameraPosition, setCameraPosition] = useState<"front" | "back">("back");

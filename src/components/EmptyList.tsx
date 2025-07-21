@@ -1,6 +1,14 @@
 import { View, Text } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
+/**
+ * Componente de galeria vazia (sem fotos adicionadas).
+ *
+ * Exibe texto infomativo de que não foi encontrado nenhuma foto para ser exibida na galeria.
+ *
+ * @component
+ * @returns {JSX.Element} Tela vazia.
+ */
 export default function EmptyList () {
     return (
         <View className="flex-1 justify-center items-center bg-slate-300">
