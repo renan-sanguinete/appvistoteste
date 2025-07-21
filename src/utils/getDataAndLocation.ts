@@ -21,8 +21,8 @@ export const getDataAndLocation = async (photoPath: string): Promise<PhotoData> 
     return {
         jsonPath: '',
         uri: photoPath,
-        data: formattedHour,
-        hora: formattedDate,
+        data: formattedDate,
+        hora: formattedHour,
         latitude: location?.latitude,
         longitude: location?.longitude,
     };

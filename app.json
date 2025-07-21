@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "teste-app-visto",
+    "name": "App Visto Teste",
     "slug": "teste-app-visto",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -32,9 +32,6 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-      "expo": {
-      "jsEngine": "hermes"
     },
     "plugins": [
       [

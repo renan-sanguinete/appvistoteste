@@ -52,7 +52,7 @@ export const GalleryList = forwardRef((props: Props, ref) => {
             }
             setItems(filesList.reverse());
         } catch (error) {
-            console.error('Erro ao carregar fotos:', error);
+            console.log('Erro ao carregar fotos:', error);
         } finally {
             setLoading(false);
         }

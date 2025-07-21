@@ -34,7 +34,7 @@ const GalleryDetailsScreen = ({ route }: Props) => {
           </Text>
           <View className="h-[1] bg-slate-300 my-2"/>
           <Text className="text-xs font-medium  text-gray-500">
-            {`Data / Hora: ${item.data} ${item.hora}`}
+            {`Data / Hora: ${item.data} - ${item.hora}`}
           </Text>
           {item.latitude && item.longitude && (
             <Text className="text-xs font-normal text-gray-500">

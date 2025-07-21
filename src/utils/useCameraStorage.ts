@@ -44,7 +44,7 @@ export const savePhoto = async (
     await FileSystem.writeAsStringAsync(dataPath, JSON.stringify(photoData));
     return true;
   } catch (error) {
-    console.error('Erro ao salvar foto:', error);
+    console.log('Erro ao salvar foto:', error);
     return null;
   }
 };
