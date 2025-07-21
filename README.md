@@ -1,6 +1,6 @@
 # Galeria de Fotos - React Native com Expo - Aplicativo teste prático para App Visto
 
-Este aplicativo é parte de um desafio proposto para uma vaga de emprego no qual deve conter uma galeria de fotos. O app exibir uma lista das fotos capturadas, permitir visualizar os detalhes da foto como data e localização, salvar e excluir imagens.
+Este aplicativo é parte de um desafio proposto para uma vaga de emprego no qual deve conter uma galeria de fotos. O app exibe uma lista das fotos capturadas, permite visualizar os detalhes da foto como data e localização, salvar e excluir imagens.
 O aplicativo foi desenvolvido em **React Native**, utilizando **Expo**, **TypeScript**, **Tailwind** e recursos nativos como câmera, armazenamento local de arquivos e geolocalização.
 
 ## Pré-requisitos
