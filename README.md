@@ -38,7 +38,12 @@ npx expo run:android
 
 ## Testes
 
-No momento, este projeto não contém testes automatizados. A implementação com o jest-expo causou muitos conflitos com as dependencias já existentes e retornou erros persistentes.
+Importante: Para rodar os testes no projeto é necessário rodar o comando npm install e separadamente o comando npm install --save-dev @testing-library/jest-native --legacy-peer-deps
+Isto é necessário para evitar problemas de conflitos de dependências do pacote, feito isso basta usar o comando:
+
+```bash
+npx jest
+```
 
 ## Observações
 
