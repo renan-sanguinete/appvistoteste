@@ -1,11 +1,9 @@
-import { checkCameraPermissonAndNavigate } from '../src/utils/checkPermissionAndNavigate';
-import * as permissionModule from '../src/permissions/hasCameraPermission';
-import * as locationModule from '../src/permissions/hasLocationPermission';
+import { checkCameraPermissonAndNavigate } from '../checkPermissionAndNavigate';
+import * as permissionModule from '../../permissions/hasCameraPermission';
+import * as locationModule from '../../permissions/hasLocationPermission';
 import Toast from 'react-native-toast-message';
 
-jest.mock('react-native-toast-message', () => ({
-  show: jest.fn(),
-}));
+jest.mock('react-native-toast-message');
 
 describe('checkCameraPermissonAndNavigate', () => {
   const navigateMock = jest.fn();
